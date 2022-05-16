@@ -1,0 +1,45 @@
+using System;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // conversão implicita 
+            float x = 4.5f; // conversão natural dos tipos de var, ja que float tem 4bytes e double tem 8bytes
+            double y = x;
+
+            Console.WriteLine(y);
+
+            //------------------
+            /*
+            double a = 5.1;  //error, por conta de um floate não supor o conteudo de um double 
+            float b = a;
+            
+             */
+
+            // casting 
+            double a = 5.1;  
+            float b = (float)a; // definição de casting = (float)var, o compilador deixa, assim vossa beldade assume o risco de perder informações da var por troca vosso tipo
+
+            //---------
+
+            int w = 5;
+            int r = 2;
+
+            double resultado = (Double) w / r;
+            Console.WriteLine(resultado);
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+}

@@ -1,0 +1,43 @@
+using System;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // operadores aritmieticos - presendencia
+
+            int num1 = 3 + 4 * 2;
+            int num2 = (3 + 4) * 2;
+            int num3 = 17 % 3;
+            double num4 = (double)10 / 8;
+
+
+            Console.WriteLine(num1);
+            Console.WriteLine(num2);
+            Console.WriteLine(num3);
+            Console.WriteLine(num4);
+
+            //----------baskhara-----------
+
+            //var
+            double b = -3.0;
+            double a = 1.0;
+            double c = -4.0;
+
+            double delta = ((b * b) - 4.0 * a * c);
+
+            double x1 = (-b + Math.Sqrt(delta)) / (2.0 * a); // primeira raiz da equação 
+            double x2 = (-b - Math.Sqrt(delta)) / (2.0 * a);// segunda raiz da equação 
+
+            Console.WriteLine($"valor delta: { delta}");
+            Console.WriteLine($" primeiro valor da equação: {x1}");
+            Console.WriteLine($" segundo  valor da equação: {x2}");
+
+
+
+
+        }
+    }
+}

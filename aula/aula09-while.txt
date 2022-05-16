@@ -1,0 +1,27 @@
+using System;
+using System.Globalization;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //estrutura repetitiva - while
+
+            Console.WriteLine(" digite um numero: ");
+            float num = float.Parse(Console.ReadLine());
+
+            while(num  >= 0){
+                float raiz = (float)Math.Sqrt(num);
+                Console.WriteLine($" a raiz do numero é: {raiz.ToString("F2", CultureInfo.InvariantCulture)}");
+                Console.WriteLine(" digite um numero: ");
+                num = float.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            }
+            Console.WriteLine(" numero negativo !!");
+
+
+        }
+    }
+}

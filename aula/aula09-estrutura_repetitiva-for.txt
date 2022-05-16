@@ -1,0 +1,27 @@
+using System;
+using System.Globalization;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine(" quantos numeros vossa beldade vai digitar: ");
+            int vezes = int.Parse(Console.ReadLine());
+
+            int soma = 0;
+            for(int i = 1; i <= vezes; i++) {
+
+                Console.WriteLine($" digite o {i}º numero: ");
+                int num = int.Parse(Console.ReadLine());
+
+                soma = soma + num;
+            }
+
+            Console.WriteLine($" soma dos valores: {soma}");
+
+        }
+    }
+}

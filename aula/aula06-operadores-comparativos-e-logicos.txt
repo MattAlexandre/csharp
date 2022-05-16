@@ -1,0 +1,77 @@
+using System;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // operadores comparativos
+            Console.WriteLine(" operadores comparativos ");
+
+            // maior e menor que
+            int a = 10;
+            bool c1 = a < 10;
+            bool c2 = a < 20;
+            bool c3 = a > 10;
+            bool c4 = a > 5;
+
+            Console.WriteLine(c1);
+            Console.WriteLine(c2);
+            Console.WriteLine(c3);
+            Console.WriteLine(c4);
+
+            Console.WriteLine(" ------------------------------------ ");
+            /*
+            Console.WriteLine(" digite um numero: ");
+            int num = int.Parse(Console.ReadLine());
+
+            if(num < 10){
+                Console.WriteLine($"{num}  é menor que 10");
+            }
+            else {
+                Console.WriteLine($"{num} é maior que 10");
+            }
+
+            */
+
+            // menor igual
+
+            bool c5 = a <= 10;
+            bool c6 = a >= 10;
+            bool c7 = a == 10;
+            bool c8 = a != 10;
+
+            Console.WriteLine(c5);
+            Console.WriteLine(c6);
+            Console.WriteLine(c7);
+            Console.WriteLine(c8);
+            Console.WriteLine(" -------------------------");
+
+            //operadores logicos 
+            Console.WriteLine(" operadores logicos ");
+
+            bool n1 = 2 > 3 && 4 != 5; //false pq uma das condições e false
+
+            bool n2 = 2 > 3 || 4 != 5; //true pois uma das condições e verdadeira
+
+            bool n3 = !(2 > 3) && 4 != 5;// true, o "!" deixa o (2 > 3) true, logo as duas condiçOes sendo true, tudovai da true
+
+
+            Console.WriteLine(n1);
+            Console.WriteLine(n2);
+            Console.WriteLine(n3);
+
+            Console.WriteLine("------------------------------");
+            Console.WriteLine(" precedencia ");
+
+            bool n4 = 10 < 5;
+
+            bool n5 = n1 || n2 && n3; // presedencia
+
+            Console.WriteLine(n4);
+            Console.WriteLine(n5);
+
+        }
+    }
+}

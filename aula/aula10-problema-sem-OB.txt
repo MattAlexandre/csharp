@@ -1,0 +1,58 @@
+using System;
+using System.Globalization;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Console.WriteLine(" digite as medidas do triangulo x: ");
+            string[] trix = Console.ReadLine().Split(' ');
+            float tx_lado1 = float.Parse(trix[0]);
+            float tx_lado2 = float.Parse(trix[1]);
+            float tx_lado3 = float.Parse(trix[2]);
+
+            Console.WriteLine(" digite as medidas do triangulo y: ");
+            string[] triy = Console.ReadLine().Split(' ');
+            float ty_lado1 = float.Parse(triy[0]);
+            float ty_lado2 = float.Parse(triy[1]);
+            float ty_lado3 = float.Parse(triy[2]);
+
+            // triangulo x
+
+            float p1 = ( (tx_lado1 + tx_lado2 + tx_lado3) / 2);
+
+            float contx = (p1 + (p1 - tx_lado1) + (p1 - tx_lado2) + (p1 - tx_lado3) ) ;
+
+            float areax = (float)Math.Sqrt(contx);
+
+            // triangulo y
+
+            float p2 = ( (ty_lado1 + ty_lado2 + ty_lado3) / 2) ;
+
+            float conty = ( p2 + (p2 - ty_lado1) + (p2 - ty_lado2) + (p2 - ty_lado3) ) ;
+
+            float areay = (float)Math.Sqrt(conty);
+
+            //---------------------------
+
+            string maior = null;
+
+            if(areax > areay){
+                maior = "  a maior area é: " + areax.ToString("F2", CultureInfo.InvariantCulture);
+            }
+            else{
+                maior = "  a maior area é: " + areay.ToString("F2", CultureInfo.InvariantCulture);
+            }
+
+            Console.WriteLine($" o triangulo x detem {areax.ToString("F2", CultureInfo.InvariantCulture)} area ");
+            Console.WriteLine($" o triangulo y detem {areay.ToString("F2",CultureInfo.InvariantCulture)} area ");
+            Console.WriteLine(maior);
+
+
+        }
+    }
+}

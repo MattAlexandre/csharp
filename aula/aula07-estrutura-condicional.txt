@@ -1,0 +1,75 @@
+using System;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //estrutura condicional 
+            Console.WriteLine(" estrutura condicional ");
+
+            int x = 10;
+
+            Console.WriteLine(" good morning ");
+
+
+            if (x < 5) { 
+                Console.WriteLine(" good afternoom ");
+            }
+            
+
+            Console.WriteLine(" good nigth ");
+
+            //--------------------------------------------
+            Console.WriteLine("----------------------");
+
+            Console.WriteLine(" programa de impar ou par");
+
+            Console.WriteLine(" digite um numero: ");
+            int num = int.Parse(Console.ReadLine());
+
+            int cont = 1;
+
+            if (num % 2 == 0) {
+                Console.WriteLine(" o numero é par =}");
+            } else {
+                Console.WriteLine(" o numero é impar =}");
+            }
+
+            //---------------------------
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine(" programa pra saudação ");
+
+            Console.WriteLine(" horas: ");
+            Console.WriteLine(" 0  a 5  = madrugada ");
+            Console.WriteLine(" 6  a 11 = manha     ");
+            Console.WriteLine(" 12 a 17 = tarde     ");
+            Console.WriteLine(" 18 a 23 = noite     ");
+
+            Console.WriteLine(" digite a hora: ");
+            int hora = int.Parse(Console.ReadLine());
+
+            if(hora >= 0 && hora <= 5) {
+                Console.WriteLine(" boa madrugada =}");
+            }
+            else if(hora >= 6 && hora <= 11) {
+                Console.WriteLine(" bom dia ");
+            }
+            else if (hora >= 12 && hora <= 17)
+            {
+                Console.WriteLine(" boa tarde =}");
+            }
+            else if (hora >= 18 && hora <= 23)
+            {
+                Console.WriteLine(" boa noite =}");
+            }
+            else {
+                Console.WriteLine(" numero invalido ={");
+            }
+
+
+
+        }
+    }
+}

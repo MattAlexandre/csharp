@@ -1,0 +1,23 @@
+using System;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int idade = 32;
+            double saldo = 10.24257;
+            string nome = " maria";
+
+            //placeholder
+            Console.WriteLine($" {nome} tem {idade} anos, e tem {saldo} de saldo =) ");
+
+            //interpolação
+            Console.WriteLine("{0} tem {1} anos, e tem {3} de saldo =) ", nome, idade,saldo);
+
+            //concatenação
+            Console.WriteLine(nome + " tem " + idade + " anos, e tem  " + saldo + " de saldo =) ");
+        }
+    }
+}

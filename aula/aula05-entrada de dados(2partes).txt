@@ -1,0 +1,98 @@
+using System;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // entrada de dados parte I
+
+            // primeira aplicação do exe - minha 
+            /*
+            Console.WriteLine(" bom dia ");
+            string frase = Console.ReadLine();
+
+            Console.WriteLine(" digite cores =}");
+            string x = Console.ReadLine();
+
+            string y = Console.ReadLine();
+
+            string z = Console.ReadLine();
+
+            string a = Console.ReadLine();
+
+            string b = Console.ReadLine();
+
+            string c = Console.ReadLine();
+
+            Console.WriteLine(frase);
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(z);
+            Console.WriteLine($"{a} {b} {c}");
+
+            */
+
+            // aplicação do professor 
+             
+            /*
+            Console.WriteLine(" bom dia ");
+            string frase = Console.ReadLine();
+
+            Console.WriteLine(" digite cores =}");
+            string x = Console.ReadLine();
+
+            string y = Console.ReadLine();
+
+            string z = Console.ReadLine();
+
+            string s = Console.ReadLine();
+
+            //Split quebra da var
+            string[] v = Console.ReadLine().Split(' ');
+            string a = v[0];
+            string b = v[1];
+            string c = v[2];
+
+
+            Console.WriteLine(frase);
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(z);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+            */
+
+            //entrada de dados parte II
+
+            //exe 2 - minha aplicação
+
+            Console.WriteLine(" digite um numero: ");
+            int num1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(" digite vosso secho: ");
+            char secho = char.Parse(Console.ReadLine());
+
+            Console.WriteLine(" digite vossa altura: ");
+            float altura = float.Parse(Console.ReadLine());
+
+            Console.WriteLine(" digite seu nome: ");
+            string nome = Console.ReadLine();
+
+            Console.WriteLine(num1);
+            Console.WriteLine(secho);
+            Console.WriteLine(altura);
+
+            Console.WriteLine($"{nome} {secho} {num1} {altura} ");
+
+
+
+
+
+
+
+        }
+    }
+}

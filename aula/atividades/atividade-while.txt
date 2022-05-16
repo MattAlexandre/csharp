@@ -1,0 +1,232 @@
+using System;
+using System.Globalization;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //atividade while
+
+            //exe01
+            /*
+             Escreva um programa que repita a leitura de uma senha até que ela seja válida.
+             Para cada leitura de senha
+             incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for
+             informada corretamente deve ser
+             impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere 
+             que a senha correta é o valor 2002.
+             */
+
+            /*
+
+            Console.WriteLine(" digite a senha: ");
+            int senha = int.Parse(Console.ReadLine());
+
+
+            while (senha != 5)
+                {
+                    Console.WriteLine(" senha invalida ");
+                    Console.WriteLine(" digite denovo ");
+                    senha = int.Parse(Console.ReadLine());
+                }
+
+            Console.WriteLine(" senha valida, wellcome ");
+
+            */
+
+            //exe02
+            /*
+             Escreva um programa para ler as coordenadas (X,Y) de uma quantidade indeterminada de pontos no sistema
+             cartesiano. Para cada ponto escrever o quadrante a que ele pertence. O algoritmo será encerrado quando pelo
+             menos uma de duas coordenadas for NULA (nesta situação sem escrever mensagem alguma).
+             */
+
+            /*
+
+            Console.WriteLine(" programa - plano cartesiano ");
+
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("                                              ");
+            Console.WriteLine("                     Y                        ");
+            Console.WriteLine("                     - 2                      ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("       Q2            |            Q1          ");
+            Console.WriteLine("                     - 1                      ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("  -|-----|-----|-----0-----|-----|-----|- X   ");
+            Console.WriteLine("  -3    -2    -1     |     1     2    3       ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("                     - -1                     ");
+            Console.WriteLine("       Q3            |            Q4          ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("                     |                        ");
+            Console.WriteLine("                     - -2                     ");
+            Console.WriteLine("                                              ");
+            Console.WriteLine("----------------------------------------------");
+
+            Console.WriteLine(" deixe as coordenada em ponto zero para o fim da execução =} ");
+
+            Console.WriteLine(" selecione as posições do plano cartesiano:  (x,y)");
+            string[] posicao = Console.ReadLine().Split(' ');
+            int numx = int.Parse(posicao[0]);
+            int numy = int.Parse(posicao[1]);
+
+
+            Console.WriteLine("                                                             ");
+
+            while (numx != 0 || numy != 0)
+            {
+
+                Console.WriteLine(" selecione as posições do plano cartesiano:  (x,y)");
+              
+                posicao = Console.ReadLine().Split(' ');
+                numx = int.Parse(posicao[0]);
+                numy = int.Parse(posicao[1]);
+
+               
+                if (numx >= 1 && numy >= 1)
+                {
+                    Console.WriteLine($" as coordenadas estao no quadrante Q1 a exatos: ({numx},{numy}) ");
+                    Console.WriteLine("                                                             ");
+                }
+
+                else if (numx < 0 && numy > 0)
+                {
+                    Console.WriteLine($" as coordenadas estao no quadrante Q2 a exatos: ({numx},{numy}) ");
+                    Console.WriteLine("                                                             ");
+
+                }
+
+                else if (numx < 0 && numy < 0)
+                {
+                    Console.WriteLine($" as coordenadas estao no quadrante Q3 a exatos: ({numx},{numy}) ");
+                    Console.WriteLine("                                                             ");
+
+                }
+
+                else if (numx > 0 && numy < 0)
+                {
+                    Console.WriteLine($" as coordenadas estao no quadrante Q4 a exatos: ({numx},{numy}) ");
+                    Console.WriteLine("                                                             ");
+
+                }
+                else if (numx == 0 && numy == 0)
+                {
+                    Console.WriteLine($" as coordenadas estao no ponto zero a exatos: ({numx},{numy}) ");
+                    Console.WriteLine("                                                             ");
+
+                }
+
+            }
+
+            Console.WriteLine(" fim execução ");
+
+            */
+
+            //exe03
+            /*
+             Um Posto de combustíveis deseja determinar qual de seus produtos tem a 
+             preferência de seus clientes. Escreva
+             um algoritmo para ler o tipo de combustível abastecido (codificado da 
+             seguinte forma: 1.Álcool 2.Gasolina 3.Diesel
+             4.Fim). Caso o usuário informe um código inválido (fora da faixa de 1 a 4)
+             deve ser solicitado um novo código (até
+             que seja válido). O programa será encerrado quando o código informado for 
+             o número 4. Deve ser escrito a
+             mensagem: "MUITO OBRIGADO" e a quantidade de clientes que abasteceram cada
+             tipo de combustível, conforme
+             exemplo.
+             */
+
+            /*
+
+            Console.WriteLine(" programa de posto - pref ");
+
+            Console.WriteLine("            posto              ");
+
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("|   codigo   |   combustivel    |");
+            Console.WriteLine("|-------------------------------|");
+            Console.WriteLine("|     1      |      alcool      |");
+            Console.WriteLine("|     2      |     gasolina     |");
+            Console.WriteLine("|     3      |      diesel      |");
+            Console.WriteLine("|     4      |       fim        |");
+            Console.WriteLine("---------------------------------");
+
+            Console.WriteLine(" digite o codigo do seu combustivel favorito:  =} ");
+            int cod = int.Parse(Console.ReadLine());
+
+            int alcool = 0;
+            int gasolina = 0;
+            int diesel = 0;
+
+            if(cod == 1){
+                alcool = alcool+1;
+            }
+                else if (cod == 2)
+            {
+                gasolina = gasolina+1;
+            }
+            else if (cod == 3)
+            {
+                diesel = diesel+1;
+            }
+            else if (cod > 4)
+            {
+                Console.WriteLine(" cod invalido ");
+            }
+
+            while (cod != 4){
+
+                Console.WriteLine(" digite outro:  =} ");
+                cod = int.Parse(Console.ReadLine());
+
+                if (cod == 1){
+                    alcool = alcool+1;
+                 }
+                else if(cod == 2){
+                    gasolina = gasolina+1;
+                }
+                else if(cod == 3){
+                    diesel = diesel+1;
+                }
+                else if(cod > 4){
+                    Console.WriteLine(" cod invalido ");
+                }
+                
+            }
+
+            string favorito = null;
+
+            if(alcool > gasolina && alcool > diesel){
+                 favorito = " alcool é o combustivel favorito com " + alcool + "  escolhas";
+            }
+            else if(gasolina > alcool && gasolina > diesel){
+                 favorito = " gasolina é o combustivel favorito com " + gasolina + "  escolhas";
+            }
+            else if (diesel > alcool &&  diesel > gasolina )
+            {
+                 favorito = " diesel é o combustivel favorito com " + diesel + "  escolhas";
+            }
+
+
+            Console.WriteLine("     fim programa         ");
+            Console.WriteLine("                          ");
+            Console.WriteLine("      very thanks         ");
+            Console.WriteLine($"  alcool   = {alcool}    ");
+            Console.WriteLine($"  gasolina = {gasolina}  ");
+            Console.WriteLine($"  diesel   = {diesel}    ");
+            Console.WriteLine(favorito);
+
+            */
+
+        }
+    }
+}

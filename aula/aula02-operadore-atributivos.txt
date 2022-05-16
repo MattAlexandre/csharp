@@ -1,0 +1,52 @@
+using System;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 10;
+            Console.WriteLine(a);
+
+            a += 2;
+            Console.WriteLine(a);
+
+            a *= 3;
+            Console.WriteLine(a);
+
+            string b = "";
+            Console.WriteLine(b);
+
+            b += "DEF";
+            Console.WriteLine(b);
+
+            //------------------------------------------------
+
+            int w = 10; // add a var +1
+            w++;
+            Console.WriteLine(w);
+
+            int y = 10;// tira da var -1
+            y++;
+            Console.WriteLine(y);
+
+            int l = 10;  // incrementa o valor dps passa a adição 
+            int x = y++;
+            Console.WriteLine(l);
+            Console.WriteLine(x);
+
+
+            int k = 10;  // passa a adição dps incrementa os valores
+            int c = ++y;
+            Console.WriteLine(k);
+            Console.WriteLine(c);
+
+
+
+
+
+
+        }
+    }
+}

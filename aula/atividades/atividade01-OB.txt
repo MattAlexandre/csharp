@@ -1,0 +1,53 @@
+using System;
+using System.Globalization;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Pessoa Salario1, Nome1 , Salario2 , Nome2;
+
+            Salario1 = new Pessoa();
+            Nome1 = new Pessoa();
+
+            Salario2 = new Pessoa();
+            Nome2 = new Pessoa();
+
+
+            Console.WriteLine(" digite vosso nome: ");
+            Nome1.Nome = Console.ReadLine();
+            Console.WriteLine(" digite vosso salario: ");
+            Salario2.Salario = double.Parse(Console.ReadLine());
+
+
+            Console.WriteLine(" digite vosso nome: ");
+            Nome1.Nome = Console.ReadLine();
+            Console.WriteLine(" digite vosso salario: ");
+            Salario2.Salario = double.Parse(Console.ReadLine());
+
+
+
+            if (Salario1.Salario > Salario2.Salario){
+                Console.WriteLine($" parabens {Nome1.Nome} vosso beldade detem o maior salario com {Salario1.Salario}R$ =)");
+            }
+            else{
+                Console.WriteLine($" parabens {Nome2.Nome} vosso beldade detem o maior salario com {Salario2.Salario}R$ =)");
+            }
+
+
+        }
+    }
+}
+
+//------------------- segundo arquivo ----------
+
+namespace aula3
+{
+    class Pessoa
+    {
+        public double Salario;
+        public string Nome;
+    }
+}

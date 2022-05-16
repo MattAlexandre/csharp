@@ -1,0 +1,53 @@
+using System;
+using System.Globalization;
+
+namespace aula3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Pessoa Idade1, Nome1 , Idade2 , Nome2;
+
+            Idade1 = new Pessoa();
+            Nome1 = new Pessoa();
+
+            Idade2 = new Pessoa();
+            Nome2 = new Pessoa();
+
+
+            Console.WriteLine(" digite vosso nome: ");
+            Nome1.Nome = Console.ReadLine();
+            Console.WriteLine(" digite vossa idade: ");
+            Idade1.Idade = double.Parse(Console.ReadLine());
+
+
+            Console.WriteLine(" digite vosso nome: ");
+            Nome2.Nome = Console.ReadLine();
+            Console.WriteLine(" digite vosso salario: ");
+            Idade2.Idade = double.Parse(Console.ReadLine());
+
+
+
+            if (Idade1.Idade > Idade2.Idade){
+                Console.WriteLine($" parabens {Nome1.Nome} vossa beldade ser mais velho com  {Idade1.Idade} anos =)");
+            }
+            else{
+                Console.WriteLine($" parabens {Nome1.Nome} vossa beldade ser mais velho com  {Idade1.Idade} anos =)");
+            }
+
+
+        }
+    }
+}
+
+//----------- segundo arquivo ------//
+
+namespace aula3
+{
+    class Pessoa
+    {
+        public double Idade;
+        public string Nome;
+    }
+}
